@@ -1,58 +1,13 @@
-<div class="w-full flex justify-center items-center bg-amber-200 h-screen">
-  <div class="content items-center justify-center scroll-container h-full w-full">
+<div class="w-full flex flex-col justify-center items-center h-screen">
+  <div class="content items-center justify-center snap-y snap-mandatory h-full w-full overflow-auto">
     <app-slide>slide number 1</app-slide>
     <app-slide>slide number 2</app-slide>
-    <div class="scroll-area">1</div>
-    <div class="scroll-area">2</div>
-    <div class="scroll-area">3</div>
-    <div class="scroll-area">4</div>
+    <app-slide>slide number 3</app-slide>
+    <app-slide>slide number 4</app-slide>
+    <app-slide>slide number 5</app-slide>
+    <app-slide>slide number 6</app-slide>
+  </div>
+  <div class="w-full bg-amber-200">
+    <app-footer/>
   </div>
 </div>
-
-
-<style>
-  .scroll-area {
-    max-width: 850px;
-    height: 500px;
-    font-size: 60px;
-  }
-
-  .scroll-container {
-    overflow: auto;
-    -webkit-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
-  }
-
-  .scroll-area {
-    scroll-snap-align: start;
-  }
-
-  .scroll-container,
-  .scroll-area {
-    margin: 0 auto;
-  }
-
-  .scroll-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-
-  .scroll-area:nth-of-type(1) {
-    background: #49b293;
-  }
-
-  .scroll-area:nth-of-type(2) {
-    background: #c94e4b;
-  }
-
-  .scroll-area:nth-of-type(3) {
-    background: #4cc1be;
-  }
-
-  .scroll-area:nth-of-type(4) {
-    background: #8360A6;
-  }
-
-</style>
