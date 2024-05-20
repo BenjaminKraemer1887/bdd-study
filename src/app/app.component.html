@@ -1,11 +1,128 @@
 <div class="w-full flex flex-col justify-center items-center h-screen">
-  <div class="content items-center justify-center snap-y snap-mandatory h-full w-full overflow-auto">
-    <app-slide>slide number 1</app-slide>
-    <app-slide>slide number 2</app-slide>
-    <app-slide>slide number 3</app-slide>
-    <app-slide>slide number 4</app-slide>
-    <app-slide>slide number 5</app-slide>
-    <app-slide>slide number 6</app-slide>
+  <div #slideshow class="content items-center justify-center snap-y snap-mandatory h-full w-full overflow-hidden">
+    <app-slide>
+      <div class="flex flex-col justify-center items-center ">
+        <div class="flex flex-col items-center gap-3">
+          <h1 class="text-5xl">Behaviour Driven Development</h1>
+          <h2 class="text-3xl">BDD</h2>
+        </div>
+        <div>
+          <img alt="bdd-cycle" src="/assets/images/bdd-cycle.png"/>
+        </div>
+      </div>
+    </app-slide>
+    <app-slide>
+      <div class="flex flex-col ">
+        <h1 class="text-3xl">Do you know TDD?</h1>
+        <div class="flex grow justify-center">
+          <img (click)="showNextLevelImage = !showNextLevelImage" [ngClass]="{'opacity-0': !showNextLevelImage}"
+               src="../assets/images/next-level.png"/>
+        </div>
+      </div>
+    </app-slide>
+    <app-slide>
+      <div class="flex flex-col">
+        <h1 class="text-3xl">The Idea.</h1>
+        <div class="flex flex-col grow items-center justify-center p-20 gap-2">
+          <p>BDD takes the idea of TDD to write the tests first</p>
+          <p>Then extends it to the whole product team. </p>
+          <p>Including developers, QA, PO, Design and Stakeholder into the process.</p>
+          <p>By writing the tests in a natural language any one can understand</p>
+          <div class="w-96 h-96">
+            <img (click)="showAllTogetherImage = !showAllTogetherImage" [ngClass]="{'opacity-0': !showAllTogetherImage}"
+                 src="../assets/images/all-together.png"/></div>
+        </div>
+      </div>
+    </app-slide>
+
+    <app-slide>
+      <div class="flex flex-col">
+        <div class="flex flex-col grow items-center justify-center p-20 gap-2">
+          <img class="w-72" src="../assets/images/but-how.png"/>
+        </div>
+      </div>
+    </app-slide>
+    <app-slide>
+      <div class="flex flex-col">
+        <h1 class="text-3xl">The Toools!</h1>
+        <div class="flex flex-col grow items-center justify-center p-5 gap-4">
+          <div (click)="toolSlide.showGherkinTitle = true" [ngClass]="{'opacity-0': !toolSlide.showGherkinTitle}"
+               class="text-2xl">Gherkin
+          </div>
+          <div class="w-64">
+            <img src="../assets/images/gherkin.png"/>
+          </div>
+          <div class="flex flex-row gap-5 p-36 pt-20">
+            <p (click)="toolSlide.showGherkinDescription = true"
+               [ngClass]="{'opacity-0': !toolSlide.showGherkinDescription}">Gherkin is designed to be easy to read and
+              understand,
+              making it accessible to all stakeholders,
+              including those without technical expertise.</p>
+
+            <p (click)="toolSlide.showGherkinSyntax = true"
+               [ngClass]="{'opacity-0': !toolSlide.showGherkinSyntax}">It uses a specific syntax to structure the
+              specifications, with keywords like <strong>Feature</strong>,
+              <strong>Scenario</strong>, <strong>Given</strong>,
+              <strong>When</strong>, <strong>Then</strong>, <strong>And</strong>, and <strong>But</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </app-slide>
+    <app-slide>
+      <div class="flex flex-col">
+        <div class="flex grow justify-center">
+          <img src="../assets/images/theory.png"/>
+        </div>
+      </div>
+    </app-slide>
+    <app-slide>
+      <div class="flex flex-col">
+        <h1 class="text-3xl">Case Study</h1>
+        <div class="grid grid-cols-2">
+          <div>
+            <div class="my-10">
+              <strong>Userstory:</strong>
+              <span>
+             As a registered user,
+             I want to log in to the web application
+             So that I can access my personalized dashboard
+            </span>
+            </div>
+            <div>
+              <strong>Description: </strong>
+              <span>
+            The login functionality should allow registered users to enter their credentials (username and password) and
+            access their personalized dashboard if the credentials are correct. If the credentials are incorrect, the user
+            should be notified with an appropriate error message.
+            </span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <strong>Acceptance Criteria: </strong>
+            <span>
+              <u>Successful login with valid credentials:</u><br/>
+              <span>
+              The user should be able to enter their username and password.
+              Upon entering valid credentials and clicking the "Login" button, the user should be redirected to their personalized dashboard.
+              The user should see a welcome message that includes their name on the dashboard.
+              </span>
+            </span>
+            <span>
+              <u>Unsuccessful login with invalid credentials:</u><br/>
+
+              If the user enters an invalid username or password, they should not be redirected.
+              An error message should be displayed, indicating that the username or password is incorrect.
+            </span>
+            <span>
+              <u>Unsuccessful login with missing credentials:</u><br/>
+
+              If the user tries to log in without entering a username or password, they should remain on the login page.
+              An error message should be displayed, indicating that the username and password are required fields.
+            </span>
+          </div>
+        </div>
+      </div>
+    </app-slide>
   </div>
   <div class="w-full bg-amber-200">
     <app-footer/>
