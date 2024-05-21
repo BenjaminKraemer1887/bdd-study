@@ -70,11 +70,44 @@
   </app-slide>
   <app-slide>
     <div class="flex flex-col">
-      <div class="flex grow justify-center">
-        <img src="../assets/images/theory.png"/>
+      <h1 class="text-3xl">Gherkin</h1>
+      <div class="flex flex-col grow justify-center p-5 gap-4 m-auto">
+        <div>
+          <div class="flex gap-2"><strong>Feature</strong><span>A high-level description of a functionality you want to test.</span>
+          </div>
+          <div class="flex gap-2"><strong>Example</strong><span>Feature: Calculator</span></div>
+        </div>
+        <div>
+          <div class="flex gap-2"><strong>Scenario</strong><span>Describes a particular situation or behavior of the feature.</span>
+          </div>
+          <div class="flex gap-2"><strong>Example</strong><span>Scenario: Addition of two positive Numbers</span></div>
+        </div>
+        <div>
+          <div class="flex gap-2"><strong>Given</strong><span>Describes the initial context or state before an action occurs.</span>
+          </div>
+          <div class="flex gap-2"><strong>Example</strong><span>Given: The calculator app is open</span></div>
+        </div>
+        <div>
+          <div class="flex gap-2">
+            <strong>When</strong><span>Describes the action or event that triggers the behavior.</span></div>
+          <div class="flex gap-2"><strong>Example</strong><span>When: I enter the first positiv number</span></div>
+        </div>
+        <div>
+          <div class="flex gap-2">
+            <strong>And</strong><span>Additional steps for Given, When, or Then to add more conditions or results.</span>
+          </div>
+          <div class="flex gap-2"><strong>Example</strong><span>And: I enter the second positiv number</span></div>
+        </div>
+        <div>
+          <div class="flex gap-2"><strong>Then</strong><span>Describes the expected outcome or result after the action occurs.</span>
+          </div>
+          <div class="flex gap-2"><strong>Example</strong><span>Then: I should be able to see the summ of the given numbers</span>
+          </div>
+        </div>
       </div>
     </div>
   </app-slide>
+
   <app-slide>
     <div class="flex flex-col">
       <h1 class="text-3xl">Case Study</h1>
@@ -121,6 +154,75 @@
             </span>
         </div>
       </div>
+    </div>
+  </app-slide>
+  <app-slide>
+    <div class="flex flex-col">
+      <h1 class="text-3xl">Case Study</h1>
+      <div class="grid grid-cols-2">
+        <div>
+          <div class="my-10">
+            <strong>Userstory:</strong>
+            <span>
+             As a registered user,
+             I want to log in to the web application
+             So that I can access my personalized dashboard
+            </span>
+          </div>
+          <div>
+            <strong>Description: </strong>
+            <span>
+            The login functionality should allow registered users to enter their credentials (username and password) and
+            access their personalized dashboard if the credentials are correct. If the credentials are incorrect, the user
+            should be notified with an appropriate error message.
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <strong>Gherkin: </strong>
+          <span>
+              <u>Successful login with valid credentials:</u><br/>
+              <span>
+              Given I go to the login page <br/>
+              When I enter my valid username and password <br/>
+              And Click the Login Button <br/>
+              Then I get redirected to my Dashboard <br/>
+              </span>
+            </span>
+          <span>
+              <u>Unsuccessful login with invalid credentials:</u><br/>
+
+              Given I go to the login page <br/>
+              When I enter valid email and invalid password <br/>
+              And Click the Login Button <br/>
+              Then I stay on the login page <br/>
+              And I can see a error msg
+            </span>
+        </div>
+      </div>
+    </div>
+  </app-slide>
+  <app-slide>
+    <div class="flex flex-col">
+      <div class="flex grow justify-center">
+        <img src="../assets/images/theory.png"/>
+      </div>
+    </div>
+  </app-slide>
+  <app-slide>
+    <div class="flex flex-col">
+      <h1 class="text-3xl">More Toools!</h1>
+      <div class="grid grid-cols-2 gap-4 justify-center items-center mt-16">
+        <div>
+          <img class="m-auto" src="../../../../assets/images/cypress.png"/>
+          <div class="text-center">Cypress</div>
+        </div>
+        <div>
+          <img class="m-auto w-52" src="../../../../assets/images/cucumber-joke.png"/>
+          <div class="text-center">Cucumber</div>
+        </div>
+      </div>
+
     </div>
   </app-slide>
 </div>

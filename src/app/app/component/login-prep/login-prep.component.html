@@ -1,7 +1,7 @@
 <div class="flex flex-col items-center justify-center w-screen h-screen">
-  <div [formGroup]="loginForm!">
-    <input class="bdd-email" formControlName="email" type="text"/>
-    <input class="bdd-password" formControlName="password" type="password"/>
+  <div [formGroup]="loginForm!" class="flex gap-3">
+    <input class="bdd-email border rounded-full" formControlName="email" type="text"/>
+    <input class="bdd-password border rounded-full" formControlName="password" type="password"/>
     <button (click)="login()" class="bdd-login">Login</button>
   </div>
   <div *ngIf="hasError" class="bdd-login-error">Das war wohl nix....</div>
